@@ -10,7 +10,7 @@
 #import "NSDate+WQCalendarLogic.h"
 
 @implementation RRCalLogic
-
+#pragma mark -  Life Cycle
 - (instancetype)init
 {
     self = [super init];
@@ -20,15 +20,14 @@
     return self;
 }
 
+#pragma mark -  Private Methods
 
-- (void)loadCurrentDate{
-    [self reloadDate:nil];
-}
-- (void)reloadDate:(NSDate *)date
+- (void)reloadCurrentDate
 {
-    [self reloadCurrentDate];
-    if (date == nil) date = self.currentDate;
-    [self reloadCalendarDataWithDate:date];
+    self.currentDate = [NSDate date];
+    
+    NSDateComponents *c = [self.currentDate YMDComponents];
+    self.currentCalendarDay = [WQCalendarDay calendarDayWithYear:c.year month:c.month day:c.day];
 }
 
 - (void)reloadCalendarDataWithDate:(NSDate *)date
@@ -46,8 +45,9 @@
     [self calculateDaysInFollowingMonthWithDate:date];
 }
 
-#pragma mark - method to calculate days in previous, current and the following month.
-
+/**
+ *  获取指定日期上个月信息
+ */
 - (void)calculateDaysInPreviousMonthWithDate:(NSDate *)date
 {
     NSUInteger weeklyOrdinality = [[date firstDayOfCurrentMonth] weeklyOrdinality];
@@ -66,6 +66,9 @@
     }
 }
 
+/**
+ *  获取指定日期当前月信息
+ */
 - (void)calculateDaysInCurrentMonthWithDate:(NSDate *)date
 {
     NSUInteger daysCount = [date numberOfDaysInCurrentMonth];
@@ -79,6 +82,9 @@
     }
 }
 
+/**
+ *  获取指定日期下个月信息
+ */
 - (void)calculateDaysInFollowingMonthWithDate:(NSDate *)date
 {
     // NSUInteger weeklyOrdinality = [[date lastDayOfCurrentMonth] weeklyOrdinality];
@@ -94,15 +100,19 @@
         [self.calendarDays addObject:calendarDay];
     }
 }
-- (void)reloadCurrentDate
-{
-    self.currentDate = [NSDate date];
-    
-    NSDateComponents *c = [self.currentDate YMDComponents];
-    self.currentCalendarDay = [WQCalendarDay calendarDayWithYear:c.year month:c.month day:c.day];
-}
 
-#pragma mark -
+
+
+#pragma mark -  Public Methods
+- (void)loadCurrentDate{
+    [self reloadDate:nil];
+}
+- (void)reloadDate:(NSDate *)date
+{
+    [self reloadCurrentDate];
+    if (date == nil) date = self.currentDate;
+    [self reloadCalendarDataWithDate:date];
+}
 
 - (void)goToPreviousMonth
 {
@@ -115,5 +125,8 @@
     self.selectedDate = [self.selectedDate dayInTheFollowingMonth];
     [self reloadDate:self.selectedDate];
 }
+
+#pragma mark -  Getters and Getters
+
 
 @end
