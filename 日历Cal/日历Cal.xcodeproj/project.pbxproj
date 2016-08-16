@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9600B0671D62B475006CC0BB /* RRCalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600B0651D62B475006CC0BB /* RRCalCell.m */; };
-		9600B0681D62B475006CC0BB /* RRCalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9600B0661D62B475006CC0BB /* RRCalCell.xib */; };
-		9600B06B1D62B5E6006CC0BB /* RRCalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600B06A1D62B5E6006CC0BB /* RRCalLogic.m */; };
-		9600B06E1D62B709006CC0BB /* WQCalendarDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600B06D1D62B709006CC0BB /* WQCalendarDay.m */; };
+		9600B0831D62C659006CC0BB /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600B07B1D62C659006CC0BB /* NSDate+WQCalendarLogic.m */; };
+		9600B0841D62C659006CC0BB /* RRCalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600B07D1D62C659006CC0BB /* RRCalCell.m */; };
+		9600B0851D62C659006CC0BB /* RRCalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9600B07E1D62C659006CC0BB /* RRCalCell.xib */; };
+		9600B0861D62C659006CC0BB /* RRCalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600B0801D62C659006CC0BB /* RRCalLogic.m */; };
+		9600B0871D62C659006CC0BB /* WQCalendarDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600B0821D62C659006CC0BB /* WQCalendarDay.m */; };
 		96625F101D61F3B10027FED1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96625F0F1D61F3B10027FED1 /* main.m */; };
 		96625F131D61F3B10027FED1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96625F121D61F3B10027FED1 /* AppDelegate.m */; };
 		96625F161D61F3B10027FED1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96625F151D61F3B10027FED1 /* ViewController.m */; };
 		96625F191D61F3B10027FED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96625F171D61F3B10027FED1 /* Main.storyboard */; };
 		96625F1B1D61F3B10027FED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96625F1A1D61F3B10027FED1 /* Assets.xcassets */; };
 		96625F1E1D61F3B10027FED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96625F1C1D61F3B10027FED1 /* LaunchScreen.storyboard */; };
-		96625F3E1D61FE350027FED1 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 96625F3D1D61FE350027FED1 /* NSDate+WQCalendarLogic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9600B0641D62B475006CC0BB /* RRCalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCalCell.h; sourceTree = "<group>"; };
-		9600B0651D62B475006CC0BB /* RRCalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCalCell.m; sourceTree = "<group>"; };
-		9600B0661D62B475006CC0BB /* RRCalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RRCalCell.xib; sourceTree = "<group>"; };
-		9600B0691D62B5E6006CC0BB /* RRCalLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCalLogic.h; sourceTree = "<group>"; };
-		9600B06A1D62B5E6006CC0BB /* RRCalLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCalLogic.m; sourceTree = "<group>"; };
-		9600B06C1D62B709006CC0BB /* WQCalendarDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCalendarDay.h; sourceTree = "<group>"; };
-		9600B06D1D62B709006CC0BB /* WQCalendarDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCalendarDay.m; sourceTree = "<group>"; };
+		9600B07A1D62C659006CC0BB /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
+		9600B07B1D62C659006CC0BB /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
+		9600B07C1D62C659006CC0BB /* RRCalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCalCell.h; sourceTree = "<group>"; };
+		9600B07D1D62C659006CC0BB /* RRCalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCalCell.m; sourceTree = "<group>"; };
+		9600B07E1D62C659006CC0BB /* RRCalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RRCalCell.xib; sourceTree = "<group>"; };
+		9600B07F1D62C659006CC0BB /* RRCalLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCalLogic.h; sourceTree = "<group>"; };
+		9600B0801D62C659006CC0BB /* RRCalLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCalLogic.m; sourceTree = "<group>"; };
+		9600B0811D62C659006CC0BB /* WQCalendarDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCalendarDay.h; sourceTree = "<group>"; };
+		9600B0821D62C659006CC0BB /* WQCalendarDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCalendarDay.m; sourceTree = "<group>"; };
 		96625F0B1D61F3B10027FED1 /* 日历Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "日历Cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96625F0F1D61F3B10027FED1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96625F111D61F3B10027FED1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,8 +40,6 @@
 		96625F1A1D61F3B10027FED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96625F1D1D61F3B10027FED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96625F1F1D61F3B10027FED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96625F3C1D61FE350027FED1 /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+WQCalendarLogic.h"; path = "../NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
-		96625F3D1D61FE350027FED1 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+WQCalendarLogic.m"; path = "../NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9600B0791D62C659006CC0BB /* newCal */ = {
+			isa = PBXGroup;
+			children = (
+				9600B07A1D62C659006CC0BB /* NSDate+WQCalendarLogic.h */,
+				9600B07B1D62C659006CC0BB /* NSDate+WQCalendarLogic.m */,
+				9600B07C1D62C659006CC0BB /* RRCalCell.h */,
+				9600B07D1D62C659006CC0BB /* RRCalCell.m */,
+				9600B07E1D62C659006CC0BB /* RRCalCell.xib */,
+				9600B07F1D62C659006CC0BB /* RRCalLogic.h */,
+				9600B0801D62C659006CC0BB /* RRCalLogic.m */,
+				9600B0811D62C659006CC0BB /* WQCalendarDay.h */,
+				9600B0821D62C659006CC0BB /* WQCalendarDay.m */,
+			);
+			path = newCal;
+			sourceTree = "<group>";
+		};
 		96625F021D61F3B10027FED1 = {
 			isa = PBXGroup;
 			children = (
@@ -72,8 +88,7 @@
 		96625F0D1D61F3B10027FED1 /* 日历Cal */ = {
 			isa = PBXGroup;
 			children = (
-				96625F481D6204960027FED1 /* newCal */,
-				96625F471D6204670027FED1 /* cal */,
+				9600B0791D62C659006CC0BB /* newCal */,
 				96625F111D61F3B10027FED1 /* AppDelegate.h */,
 				96625F121D61F3B10027FED1 /* AppDelegate.m */,
 				96625F141D61F3B10027FED1 /* ViewController.h */,
@@ -93,29 +108,6 @@
 				96625F0F1D61F3B10027FED1 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		96625F471D6204670027FED1 /* cal */ = {
-			isa = PBXGroup;
-			children = (
-				9600B06C1D62B709006CC0BB /* WQCalendarDay.h */,
-				9600B06D1D62B709006CC0BB /* WQCalendarDay.m */,
-			);
-			name = cal;
-			sourceTree = "<group>";
-		};
-		96625F481D6204960027FED1 /* newCal */ = {
-			isa = PBXGroup;
-			children = (
-				96625F3C1D61FE350027FED1 /* NSDate+WQCalendarLogic.h */,
-				96625F3D1D61FE350027FED1 /* NSDate+WQCalendarLogic.m */,
-				9600B0641D62B475006CC0BB /* RRCalCell.h */,
-				9600B0651D62B475006CC0BB /* RRCalCell.m */,
-				9600B0661D62B475006CC0BB /* RRCalCell.xib */,
-				9600B0691D62B5E6006CC0BB /* RRCalLogic.h */,
-				9600B06A1D62B5E6006CC0BB /* RRCalLogic.m */,
-			);
-			path = newCal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +170,7 @@
 			files = (
 				96625F1E1D61F3B10027FED1 /* LaunchScreen.storyboard in Resources */,
 				96625F1B1D61F3B10027FED1 /* Assets.xcassets in Resources */,
-				9600B0681D62B475006CC0BB /* RRCalCell.xib in Resources */,
+				9600B0851D62C659006CC0BB /* RRCalCell.xib in Resources */,
 				96625F191D61F3B10027FED1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,13 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9600B0671D62B475006CC0BB /* RRCalCell.m in Sources */,
-				9600B06E1D62B709006CC0BB /* WQCalendarDay.m in Sources */,
-				9600B06B1D62B5E6006CC0BB /* RRCalLogic.m in Sources */,
 				96625F161D61F3B10027FED1 /* ViewController.m in Sources */,
-				96625F3E1D61FE350027FED1 /* NSDate+WQCalendarLogic.m in Sources */,
+				9600B0841D62C659006CC0BB /* RRCalCell.m in Sources */,
+				9600B0831D62C659006CC0BB /* NSDate+WQCalendarLogic.m in Sources */,
+				9600B0861D62C659006CC0BB /* RRCalLogic.m in Sources */,
 				96625F131D61F3B10027FED1 /* AppDelegate.m in Sources */,
 				96625F101D61F3B10027FED1 /* main.m in Sources */,
+				9600B0871D62C659006CC0BB /* WQCalendarDay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
