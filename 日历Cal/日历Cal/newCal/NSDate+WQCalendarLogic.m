@@ -12,8 +12,14 @@
 
 - (NSUInteger)numberOfDaysInCurrentMonth
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
     // 频繁调用 [NSCalendar currentCalendar] 可能存在性能问题
     return [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:self].length;
+    
+#pragma clang diagnostic pop
+
 }
 
 - (NSUInteger)numberOfWeeksInCurrentMonth
@@ -35,25 +41,53 @@
 
 - (NSUInteger)weeklyOrdinality
 {
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
+    
     return [[NSCalendar currentCalendar] ordinalityOfUnit:NSDayCalendarUnit inUnit:NSWeekCalendarUnit forDate:self];
+    
+#pragma clang diagnostic pop
 }
 
 - (NSUInteger)monthlyOrdinality
 {
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
+    
     return [[NSCalendar currentCalendar] ordinalityOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:self];
+    
+#pragma clang diagnostic pop
 }
 
 - (NSDate *)firstDayOfCurrentMonth
 {
     NSDate *startDate = nil;
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
+    
     BOOL ok = [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&startDate interval:NULL forDate:self];
+    
+#pragma clang diagnostic pop
     NSAssert1(ok, @"Failed to calculate the first day of the month based on %@", self);
     return startDate;
 }
 
 - (NSDate *)lastDayOfCurrentMonth
 {
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
+    
     NSCalendarUnit calendarUnit = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    
+#pragma clang diagnostic pop
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:calendarUnit fromDate:self];
     dateComponents.day = [self numberOfDaysInCurrentMonth];
     return [[NSCalendar currentCalendar] dateFromComponents:dateComponents];
@@ -75,7 +109,12 @@
 
 - (NSDateComponents *)YMDComponents
 {
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    
     return [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:self];
+#pragma clang diagnostic pop
 }
 
 - (NSUInteger)weekNumberInCurrentMonth
