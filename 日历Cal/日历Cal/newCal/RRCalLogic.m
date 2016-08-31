@@ -24,6 +24,7 @@
 
 - (void)reloadCurrentDate
 {
+    // 修正时区, 修复字段和date不一致的问题.
     self.currentDate = [NSDate date];
     
     NSDateComponents *c = [self.currentDate YMDComponents];
@@ -110,7 +111,10 @@
 - (void)reloadDate:(NSDate *)date
 {
     [self reloadCurrentDate];
-    if (date == nil) date = self.currentDate;
+    if (date == nil){
+        date = self.currentDate;
+    }
+    
     [self reloadCalendarDataWithDate:date];
 }
 

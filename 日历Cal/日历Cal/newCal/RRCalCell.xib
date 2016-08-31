@@ -13,9 +13,26 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjq-BL-X92" userLabel="leftLine">
+                        <rect key="frame" x="0.0" y="0.0" width="1" height="40"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="1nU-le-VLM"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yr8-uh-EPv" userLabel="topLine">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="1"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="QRc-oS-kpQ"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="每日一题_表格正确_.png" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-qS-wOO">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiQ-qd-7no">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -26,24 +43,39 @@
                             <constraint firstAttribute="height" constant="18.5" id="xHf-GW-5CG"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.082352941176470587" green="0.63137254901960782" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="9LA-Sh-cih" secondAttribute="trailing" id="1K3-r9-C5k"/>
+                <constraint firstAttribute="bottom" secondItem="wRa-qS-wOO" secondAttribute="bottom" id="52r-8y-h8J"/>
+                <constraint firstAttribute="trailing" secondItem="yr8-uh-EPv" secondAttribute="trailing" id="5Y6-td-a8M"/>
+                <constraint firstItem="wRa-qS-wOO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6Pt-fO-5da"/>
                 <constraint firstAttribute="bottom" secondItem="kiQ-qd-7no" secondAttribute="bottom" id="6Sk-jz-oju"/>
+                <constraint firstItem="wRa-qS-wOO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EiY-1x-8SO"/>
                 <constraint firstItem="kiQ-qd-7no" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H4Q-Ac-yIC"/>
                 <constraint firstItem="9LA-Sh-cih" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-3" id="OM1-lp-BpM"/>
+                <constraint firstAttribute="trailing" secondItem="wRa-qS-wOO" secondAttribute="trailing" id="Oze-Pm-Pmz"/>
+                <constraint firstItem="yr8-uh-EPv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="U39-Bq-GVM"/>
+                <constraint firstItem="Hjq-BL-X92" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dfv-Sc-9zP"/>
+                <constraint firstItem="Hjq-BL-X92" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="drE-3F-Thu"/>
+                <constraint firstAttribute="bottom" secondItem="Hjq-BL-X92" secondAttribute="bottom" id="e7q-Ke-h8e"/>
+                <constraint firstItem="yr8-uh-EPv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eDD-qp-59O"/>
                 <constraint firstItem="kiQ-qd-7no" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="p5L-bk-wkv"/>
                 <constraint firstAttribute="trailing" secondItem="kiQ-qd-7no" secondAttribute="trailing" id="tQ8-mg-QHU"/>
             </constraints>
             <connections>
                 <outlet property="dateLabel" destination="kiQ-qd-7no" id="N4F-g5-z9q"/>
+                <outlet property="stateImageView" destination="wRa-qS-wOO" id="duh-Qk-3Nu"/>
                 <outlet property="todayLabel" destination="9LA-Sh-cih" id="8Fw-dj-exz"/>
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="每日一题_表格正确_.png" width="22" height="27"/>
+    </resources>
 </document>

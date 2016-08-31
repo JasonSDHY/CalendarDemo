@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WQCalendarDay.h"
+#import "RRCalCellModel.h"
 
 @interface RRCalCell : UICollectionViewCell
 
-@property (nonatomic, strong) WQCalendarDay *calDayModel;
+@property (nonatomic, weak) NSDate * selectedDate;
+@property (nonatomic, strong) RRCalCellModel *cellModel;
 
 @end

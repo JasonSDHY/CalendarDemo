@@ -32,7 +32,16 @@
     c.year = self.year;
     c.month = self.month;
     c.day = self.day;
-    return [[NSCalendar currentCalendar] dateFromComponents:c];
+    
+    
+    
+    NSDate *newdate = [[NSCalendar currentCalendar] dateFromComponents:c];
+    
+    // 修正时区, 修复字段和date不一致的问题.
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate: newdate];
+    return [newdate  dateByAddingTimeInterval: interval];
+    
 }
 
 - (BOOL)isToday{
@@ -56,6 +65,20 @@
     
     NSString *dateStr = [fmt stringFromDate:self.date];
     NSString *nowStr = [fmt stringFromDate:now];
+    
+    return [dateStr isEqualToString:nowStr];
+}
+
+/**
+ *  是否为相同月
+ */
+- (BOOL)isSameMonthWithDate:(NSDate *)date{
+
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM";
+    
+    NSString *dateStr = [fmt stringFromDate:self.date];
+    NSString *nowStr = [fmt stringFromDate:date];
     
     return [dateStr isEqualToString:nowStr];
 }

@@ -11,6 +11,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *todayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *stateImageView;
 
 @end
 
@@ -19,16 +20,38 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    
 }
 
-- (void)setCalDayModel:(WQCalendarDay *)calDayModel{
-    _calDayModel = calDayModel;
-    
+- (void)setCellModel:(RRCalCellModel *)cellModel{
+    _cellModel = cellModel;
+    WQCalendarDay *calDayModel = cellModel.dayModel;
     
     self.todayLabel.hidden = !calDayModel.isToday;
     self.dateLabel.text = @(calDayModel.day).stringValue;
-    self.dateLabel.textColor = calDayModel.isCurrentMonth?[UIColor blackColor]:[UIColor grayColor];
+    self.dateLabel.textColor = [calDayModel isSameMonthWithDate:self.selectedDate]?[UIColor blackColor]:[UIColor grayColor];
     
+    
+    switch (cellModel.dayState) {
+        case KJCurrentDayPracticeStateUnDo: {
+            self.stateImageView.hidden = YES;
+            break;
+        }
+        case KJCurrentDayPracticeStateSuccess: {
+            self.stateImageView.hidden = NO;
+
+            self.stateImageView.image = [UIImage imageNamed:@"calYesBig"];
+            break;
+        }
+        case KJCurrentDayPracticeStateWrong: {
+            self.stateImageView.hidden = NO;
+
+            self.stateImageView.image = [UIImage imageNamed:@"calWrongBig"];
+            break;
+        }
+    }
+
 }
 
 @end

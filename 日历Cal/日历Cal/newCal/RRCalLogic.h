@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "WQCalendarDay.h"
+#import "NSDate+WQCalendarLogic.h"
 @interface RRCalLogic : NSObject
 
-@property (nonatomic, strong) NSMutableArray *daysInPreviousMonth;
-@property (nonatomic, strong) NSMutableArray *daysInCurrentMonth;
-@property (nonatomic, strong) NSMutableArray *daysInFollowingMonth;
+@property (nonatomic, strong) NSMutableArray *daysInPreviousMonth;// 上一个月的日子: 0~6
+@property (nonatomic, strong) NSMutableArray *daysInCurrentMonth;// 当前月的日子
+@property (nonatomic, strong) NSMutableArray *daysInFollowingMonth;// 下个月的日子: 14
 
 @property (nonatomic, strong) NSMutableArray *calendarDays; // 当前月份展示的日历天
 

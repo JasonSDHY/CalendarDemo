@@ -22,4 +22,10 @@
 
 - (BOOL)isToday;
 - (BOOL)isCurrentMonth;
+
+/**
+ *  是否为相同月
+ */
+- (BOOL)isSameMonthWithDate:(NSDate *)date;
+
 @end

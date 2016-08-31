@@ -138,4 +138,33 @@
     return weekNumber;
 }
 
+- (NSDate *)fixSystemTimeZone{
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate: self];
+    return [self dateByAddingTimeInterval: interval];
+}
+
+/**
+ *  判断传入的日期是这个日期之后的日期.
+ */
+- (BOOL)isFutureDayWithDate:(NSDate *)date{
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd";
+    
+    NSString *dateStr = [fmt stringFromDate:date];
+    NSString *nowStr = [fmt stringFromDate:self];
+    
+    NSArray *dateStrArray = [[NSMutableString stringWithString:dateStr] componentsSeparatedByString:@"-"];
+    NSArray *nowStrArray = [[NSMutableString stringWithString:nowStr] componentsSeparatedByString:@"-"];
+    
+    for (int i = 0; i<dateStrArray.count; i++) {
+        NSString *dateS = dateStrArray[i];
+        NSString *nowS = nowStrArray[i];
+        if (dateS.integerValue >nowS.integerValue) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 @end

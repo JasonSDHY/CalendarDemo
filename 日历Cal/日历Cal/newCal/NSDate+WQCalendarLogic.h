@@ -30,4 +30,12 @@
 
 - (NSUInteger)weekNumberInCurrentMonth;
 
+/**
+ *  修正NSDate的时区
+ */
+- (NSDate *)fixSystemTimeZone;
+/**
+ *  判断传入的日期是这个日期之后的日期.
+ */
+- (BOOL)isFutureDayWithDate:(NSDate *)date;
 @end
