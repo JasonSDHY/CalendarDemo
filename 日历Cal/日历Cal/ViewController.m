@@ -120,7 +120,7 @@ static NSString *cellID = @"cellID";
         cellModel.dayModel = dayModel;
         
         // 在这里根据日期判断, 当前日期的做题情况
-        cellModel.dayState = KJCurrentDayPracticeStateSuccess;
+        cellModel.dayState = KJCurrentDayPracticeStateUnDo;
         
         [mArray addObject:cellModel];
     }
